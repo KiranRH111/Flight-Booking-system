@@ -27,9 +27,14 @@ npm install
 ## Run commands:
 npm run start:dev
 
+and this application runs on port http://localhost:3001
+
 ## API Structure
 All API endpoints are centralized in the User Controller (`src/user/user.controller.ts`). The base path for all endpoints is `/user`.
 
+
+## PORT
+3001
 
 ## Database Setup
 
@@ -37,7 +42,7 @@ All API endpoints are centralized in the User Controller (`src/user/user.control
    - Download and install PostgreSQL from (https://www.postgresql.org/download/)
    - Remember your PostgreSQL username and password during installation
 
-all the DB creds are in .env file
+All database credentials and config are stored in the .env file
 
 
 2. Create Database:
