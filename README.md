@@ -30,3 +30,19 @@ npm run start:dev
 ## API Structure
 All API endpoints are centralized in the User Controller (`src/user/user.controller.ts`). The base path for all endpoints is `/user`.
 
+
+## Database Setup
+
+1. Install PostgreSQL:
+   - Download and install PostgreSQL from (https://www.postgresql.org/download/)
+   - Remember your PostgreSQL username and password during installation
+
+all the DB creds are in .env file
+
+
+2. Create Database:
+```bash
+psql -U postgres
+CREATE DATABASE flight_management;
+
+
