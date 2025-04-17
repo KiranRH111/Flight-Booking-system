@@ -23,9 +23,14 @@ export class UserService {
     private seatClassRepository: Repository<SeatClass>,
   ) {}
 
-  async create(createUserDto: CreateUserDto): Promise<User> {
-    const user = this.userRepository.create(createUserDto);
-    return await this.userRepository.save(user);
+  async create(createUserDto: CreateUserDto): Promise<{ message: string }> {
+    try {
+      const user = this.userRepository.create(createUserDto);
+      await this.userRepository.save(user);
+      return { message: 'User created successfully' };
+    } catch (error) {
+      throw new BadRequestException('Failed to create user. Please try again.');
+    }
   }
 
 

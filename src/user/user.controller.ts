@@ -10,8 +10,8 @@ import { SeatClass } from 'src/entities/seat-class.entity';
 export class UserController {
   constructor(private readonly userService: UserService) { }
 
-  @Post('/create')
-  create(@Body() createUserDto: CreateUserDto) {
+  @Post('/create/user')
+  createUser(@Body() createUserDto: CreateUserDto) {
     return this.userService.create(createUserDto);
   }
 
